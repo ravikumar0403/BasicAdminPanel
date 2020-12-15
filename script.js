@@ -58,7 +58,7 @@ let input = document.getElementById('search-box')
 input.addEventListener("input", ()=>{
     console.log(input.value.toUpperCase())
     let filteredList = userDetails.filter((curr) => {
-        return curr.firstName.includes(input.value) || curr.firstName.includes(input.value.toUpperCase()) || curr.firstName.includes(input.value.toLowerCase())
+        return curr.firstName.toLowerCase().includes(input.value.toLowerCase())
     })
     createDataRows(filteredList)
     // console.log(filteredList)
